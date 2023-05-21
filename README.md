@@ -38,3 +38,45 @@ for example "1:05".
 • "mm minutes after the start" for arriving more than an hour late.
 • "hh:mm hours after the start" for arriving late with 1 hour or more. Always print minutes using 
 2 digits, for example "1:03".
+
+02.Problem: Trip
+It is strange, but most people start planning their vacations well in advance. A young programmer from 
+Bulgaria has certain budget and spare time in a particular season.
+Write a program that accepts as input the budget (in BGN – Bulgarian levs) and season, and as output
+displays programmer's vacation place and the amount of money they will spend.
+The budget determines the destination, and the season determines what amount of the budget will 
+be spent. If the season is summer, the programmer will go camping, if it is winter – they will stay in a 
+hotel. If it is in Europe, regardless of the season, the programmer will stay in a hotel. Each camp or
+hotel, according to the destination, has its own price, which corresponds to a particular percentage of 
+the budget:
+• If 100 BGN or less – somewhere in Bulgaria.
+o Summer – 30% of the budget.
+o Winter – 70% of the budget.
+• If 1000 BGN or less – somewhere on the Balkans.
+o Summer – 40% of the budget.
+o Winter – 80% of the budget.
+• If more than 1000 BGN – somewhere in Europe.
+o Upon traveling in Europe, regardless of the season, the programmer will spend 90% of 
+the budget.
+Input Data
+The input data will be read from the console and will consist of two lines:
+• The first line holds the budget – real number in the range [10.00 … 5000.00].
+• The second line holds one of two possible seasons: "summer" or "winter".
+Output Data
+Two lines must be printed on the console.
+• On the first line – "Somewhere in {destination}" among "Bulgaria", "Balkans" and "Europe".
+• On the second line – "{Vacation type} – {Amount spent}".
+o The Vacation can be in a "Camp" or "Hotel".
+o The Amount must be rounded up to the second digit after the decimal point.
+Sample Input and Output
+Input   Output                 Input   Output 
+50      Somewhere in Bulgaria  75      Somewhere in Bulgaria
+summer  Camp -15.00            winter  Hotel - 52.50
+
+Input  Output                  Input  Output 
+312    Somewhere in Balkans    1500   Somewhere in Europe
+summer Camp -124.80            summer Hotel – 1350.00
+
+Hints and Guidelines
+Typically, as for the other tasks, we can separate the solution into the following parts: reading the 
+input data, doing calculations, printing the result.
