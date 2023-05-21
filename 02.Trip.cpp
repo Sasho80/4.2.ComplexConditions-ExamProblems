@@ -16,7 +16,7 @@ int main() {
 			restingPlace = "Camp";
 		}
 		else{
-			moneySpent = 0.3 * budget;
+			moneySpent = 0.7 * budget;
 			restingPlace = "Hotel";
 		}
 	}
