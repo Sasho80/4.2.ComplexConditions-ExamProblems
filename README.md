@@ -80,3 +80,40 @@ summer Camp -124.80            summer Hotel – 1350.00
 Hints and Guidelines
 Typically, as for the other tasks, we can separate the solution into the following parts: reading the 
 input data, doing calculations, printing the result.
+
+03.Problem: Operations with Numbers
+Write a program that reads two integers (n1 and n2) and an operator that performs a particular
+mathematical operation with them. Possible operations are: summing up (+), subtraction (-), multiplying (*), division (/) and modular division (%). Upon summing up, subtracting and multiplying, the 
+console must print the result and display whether it is even or odd number. Upon regular division –
+just the result, and upon modular division – the remainder. You need to take into consideration the 
+fact that the divisor can be equal to zero (= 0) and dividing by zero is not possible. In this case, a
+special notification must be printed.
+Input Data
+3 lines are read from the console:
+• N1 – integer within the range [0 … 40 000].
+• N2 – integer within the range [0 … 40 000].
+• Operator – one character among: "+", "-", "*", "/", "%".
+Output Data
+Print the output as a single line on the console:
+
+• If the operation is summing up, subtraction or multiplying:
+o "{N1} {operator} {N2} = {output} - {even/odd}".
+• If the operation is division:
+o "{N1} / {N2} = {output}" – the result is formatted up to the second digit after the decimal 
+point.
+• If the operation is modular division:
+o "{N1} % {N2} = {remainder}".
+• In case of dividing by 0 (zero):
+o "Cannot divide {N1} by zero".
+Sample Input and Output
+Input Output            Input Output                        Input Output
+10    10 - 1 = 9 - odd  10    Cannot divide 10 by zero      10    10 + 12 = 22 - even
+1                       0                                   12
+-                       %                                   +
+Input Output            Input Output            Input Output
+123   123 / 12 = 10.25  10    10 % 3 = 1        112   Cannot divide 112 by zero
+12                      3                       0
+/                       %                       /
+
+Hints and Guidelines
+The problem is not complex, but there are a lot of code lines to write.
