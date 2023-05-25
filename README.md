@@ -153,7 +153,7 @@ Input   Output           Explanations
 Normal  0.01 leva left.  Remaining amount: 1000 – 750 = 250.
 1                        Category Normal: the ticket price is 249.99 * 1 = 249.99
                          249.99 < 250: the person will have 250 - 249.99 = 0.01 money left
-                         
+                       
 Input  Output            Explanations 
 30000  Not enough money! 49 persons: 40% of the budget are spent on transportation.
 VIP    You need 6499.51  Remaining amount: 30000 - 12000 = 18000.
@@ -163,3 +163,41 @@ VIP    You need 6499.51  Remaining amount: 30000 - 12000 = 18000.
 Hints and Guidelines
 We will read the input data and perform the calculations described in the task requirements, in order 
 to check if the money will be sufficient.
+
+05.Problem: Hotel Room
+A hotel offers two types of rooms: studio and apartment. Prices are in Bulgarian levs (BGN / lv).
+Write a program that calculates the price of the whole stay for a studio and apartment. Prices depend 
+on the month of the stay:
+May and October June and September July and August 
+Studio – 50 BGN/night Studio – 75.20 BGN/night Studio – 76 BGN/night
+Apartment – 65 BGN/night Apartment – 68.70 BGN/night Apartment – 77 BGN/night
+The following discounts are also offered:
+• For a studio, in case of more than 7 stays in May and October: 5% discount.
+• For a studio, in case of more than 14 stays in May and October: 30% discount.
+• For a studio, in case of more than 14 stays in June and September: 20% discount.
+• For an apartment, in case of more than 14 stays, no limitation regarding the month: 10% 
+discount.
+Input Data
+The input data is read from the console and contains exactly two lines:
+Chapter 4.2. More Complex Conditions – Exam Problems 185
+• The first line contains the month – May, June, July, August, September or October.
+• The second line is the number of stays – integer within the range [0 … 200].
+Output Data
+Print the following two lines on the console:
+• On the first line: "Apartment: { price for the whole stay } lv."
+• On the second line: "Studio: { price for the whole stay } lv."
+The price for the whole stay must be formatted up to two symbols after the decimal point.
+Sample Input and Output
+Input    Output                 Comments 
+ May     Apartment: 877.50 lv.  In May, in case of more than 14 stays, the discount for 
+ 15      Studio: 525.00 lv.     a studio is 30% (50 – 15 = 35), and for the apartment is 
+                                10% (65 – 6.5 = 58.5).
+                                The whole stay in the apartment: 877.50 lv.
+                                The whole stay in the studio: 525.00 lv.
+Input   Output                  Input   Output 
+June    Apartment: 961.80 lv.   August  Apartment: 1386.00 lv.
+14      Studio: 1052.80 lv      20      Studio: 1520.00 lv.
+
+Hints and Guidelines
+We will read the input data and do the calculations according to the provided price list and the 
+discount rules, and finally print the result.
