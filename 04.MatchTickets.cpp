@@ -35,7 +35,7 @@ int main() {
         moneyForTickets= people * 249.99;
 	}
 	moneyDifference = budget - transportCharges - moneyForTickets;
-	if ((budget - transportCharges)<(moneyForTickets*people)){
+	if (moneyDifference<0){
 		double result = abs(moneyDifference);
 		cout << "Not enough money! " << "You need " <<
 			fixed << setprecision(2) << result <<
